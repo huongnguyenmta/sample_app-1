@@ -16,36 +16,18 @@
 #
 # This would use the information in config/locales/es.yml.
 #
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  about: "About"
-  author: "Michael Hartl"
-  and: "and"
-  book: "book"
-  by: "by"
-  contact: "Contact"
-  contact_head: "Contact the Ruby on Rails Tutorial about the sample app at the"
-  contact_page: "contact page"
-  help: "Help"
-  home: "Home"
-  home_1: "This is the home page for the"
-  home_2: "sample application"
-  is_a: "is a"
-  log_in: "Log in"
-  news: "News"
-  rails_get_help_1: "Get help on the Ruby on Rails Tutorial at the"
-  rails_get_help_2: "To get help on this sample app, see the"
-  rails_help_page: "Rails Tutorial help page"
-  ruby: "Ruby on Rails"
-  ruby_tut: "Ruby on Rails Tutorial"
-  sample_app: "sample app"
-  screencast_series: "screencast series"
-  sign_up: "Sign up"
-  sign_up_content: "This will be a signup page for new users."
-  sign_up_now: "Sign up now!"
-  the: "The"
-  This_is_the_sample_application_for_the_tutorial: "This is the sample application for the tutorial."
-  to_teach_web_development_with: "to teach web development with"
-  welcome: "Welcome to the Sample App"
+  hello: "Hello world"
