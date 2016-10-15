@@ -43,6 +43,7 @@ en:
   change: "change"
   check_email: "Check your email for the activation link."
   compose_new: "Compose new micropost..."
+  change: "change"
   confirm: "You sure?"
   contact: "Contact"
   contact_head: "Contact the Ruby on Rails Tutorial about the sample app at the"
@@ -98,4 +99,5 @@ en:
   update_profile: "Update your profile"
   user_delete: "User deleted"
   view_profile: "view my profile"
+  update_profile: "Update your profile"
   welcome: "Welcome to the Sample App"
