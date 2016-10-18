@@ -1,21 +1,19 @@
 class PasswordResetsController < ApplicationController
-  before_action :get_user, only: [:edit, :update]
-  before_action :valid_user, only: [:edit, :update]
-  before_action :check_expiration, only: [:edit, :update]
+  before_action :get_user, :valid_user, :check_expiration, only: [:edit, :update]
 
   def new
   end
 
   def create
-    @user = User.find_by(email: params[:password_reset][:email].downcase)
+    @user = User.find_by email: params[:password_reset][:email].downcase
     if @user
       @user.create_reset_digest
       @user.send_password_reset_email
-      flash[:info] = "Email sent with password reset instructions"
+      flash[:info] = t "email_sent"
       redirect_to root_url
     else
-      flash.now[:danger] = "Email address not found"
-      render "new"
+      flash.now[:danger] = t "email_not_found"
+      render :new
     end
   end
 
@@ -24,26 +22,26 @@ class PasswordResetsController < ApplicationController
 
   def update
     if params[:user][:password].empty?
-      @user.errors.add(:password, "can't be empty")
-      render "edit"
-    elsif @user.update_attributes(user_params)
+      @user.errors.add :password, t("cant_empty")
+      render :edit
+    elsif @user.update_attributes user_params
       log_in @user
-      @user.update_attribute(:reset_digest, nil)
-      flash[:success] = "Password has been reset."
+      @user.update_attributes(:reset_digest, nil)
+      flash[:success] = t "password_reset2"
       redirect_to @user
     else
-      render "edit"
+      render :edit
     end
   end
 
 
   private
     def user_params
-      params.require(:user).permit(:password, :password_confirmation)
+      params.require(:user).permit :password, :password_confirmation
     end
 
     def get_user
-      @user = User.find_by(email: params[:email])
+      @user = User.find_by email: params[:email]
     end
 
     def valid_user
@@ -55,7 +53,7 @@ class PasswordResetsController < ApplicationController
 
     def check_expiration
       if @user.password_reset_expired?
-        flash[:danger] = "Password reset has expired."
+        flash[:danger] = t "password_expire"
         redirect_to new_password_reset_url
       end
     end
