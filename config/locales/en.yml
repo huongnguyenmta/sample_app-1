@@ -1,32 +1,11 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   about: "About"
   account_activate: "Account activation"
   account_not_activate: "Account not activated. "
   ago: "ago."
   all_users: "All users"
-  author: "Michael Hartl"
   and: "and"
+  author: "Michael Hartl"
   book: "book"
   by: "by"
   cant_empty: "can't be empty"
@@ -42,12 +21,12 @@ en:
   email_not_found: "Email address not found"
   email_sent: "Email sent with password reset instructions"
   follow: "Follow"
-  followers: "Followers"
   followers2: "followers"
-  following: "Following"
+  followers: "Followers"
   following2: "following"
-  forgot_password: "(forgot password)"
+  following: "Following"
   forgot_password2: "Forgot password"
+  forgot_password: "(forgot password)"
   help: "Help"
   home: "Home"
   home_1: "This is the home page for the"
@@ -60,16 +39,16 @@ en:
   log_in: "Log in"
   log_out: "Log out"
   micropost: "micropost"
-  microposts: "Microposts:"
   micropost_create: "Micropost created!"
   micropost_delete: "Micropost deleted"
+  microposts: "Microposts:"
   new_user: "New user?"
   news: "News"
   password_expire: "Password reset has expired."
-  password_reset: "Password reset"
   password_reset2: "Password has been reset."
-  please_login: "Please log in."
+  password_reset: "Password reset"
   please_check_email: "Please check your email to activate your account"
+  please_login: "Please log in."
   posted: "Posted"
   profile_update: "Profile updated"
   rails_get_help_1: "Get help on the Ruby on Rails Tutorial at the"
