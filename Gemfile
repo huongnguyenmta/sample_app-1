@@ -14,7 +14,6 @@ gem "puma"
 gem "sass-rails"
 gem "uglifier", "3.0.0"
 gem "coffee-rails", "4.2.1"
-gem "jquery-rails", "4.1.1"
 gem "turbolinks"
 gem "jbuilder"
 gem "letter_opener", :group => :development

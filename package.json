@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:dieunb/sample_app-1.git",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-ujs": "^1.2.2"
+  }
 }
