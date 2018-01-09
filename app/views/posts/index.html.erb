@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="my-4">
+        Page Heading
+        <small>Secondary Text</small>
+      </h1>
+
+      <% @posts.each do |post| %>
+        <%= render partial: "post", locals: {post: post} %>
+      <% end %>
+
+      <%#= will_paginate @posts %>
+      <%= will_paginate(@posts,
+        :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+    </div>
+
+    <div class="col-md-4">
+      <%= render partial: "search" %>
+    </div>
+  </div>
+</div>

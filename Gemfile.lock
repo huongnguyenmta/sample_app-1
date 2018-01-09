@@ -42,13 +42,14 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    autoprefixer-rails (7.2.3)
+    autoprefixer-rails (7.2.4)
       execjs
     bcrypt (3.1.11)
-    bootstrap-sass (3.3.6)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
-    bootstrap-will_paginate (0.0.10)
+    bootstrap (4.0.0.beta3)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.12.3, < 2)
+      sass (>= 3.5.2)
+    bootstrap-will_paginate (1.0.0)
       will_paginate
     builder (3.2.3)
     byebug (9.0.0)
@@ -238,6 +239,7 @@ GEM
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     pg (0.18.4)
+    popper_js (1.12.9)
     public_suffix (3.0.1)
     puma (3.11.0)
     rack (2.0.3)
@@ -324,8 +326,8 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (= 3.1.11)
-  bootstrap-sass (= 3.3.6)
-  bootstrap-will_paginate (= 0.0.10)
+  bootstrap (~> 4.0.0.beta3)
+  bootstrap-will_paginate
   byebug (= 9.0.0)
   carrierwave (= 0.11.2)
   coffee-rails (= 4.2.1)

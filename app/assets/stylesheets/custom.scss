@@ -1,7 +1,11 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
 
 $gray-medium-light: #eaeaea;
+$gray-light: #999;
+$gray-lighter: #eee;
+$state-danger-text: #a94442;
+$gray-darker: #222;
+$gray: #555;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -42,14 +46,14 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-light;
-}
+// h2 {
+//   font-size: 1.2em;
+//   letter-spacing: -1px;
+//   margin-bottom: 30px;
+//   text-align: center;
+//   font-weight: normal;
+//   color: $gray-light;
+// }
 
 p {
   font-size: 1.1em;
@@ -83,9 +87,9 @@ footer {
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
-    color: #gray;
+    color: $gray;
     &:hover{
-      color: #gray-darker;
+      color: $gray-darker;
     }
   }
   small {
@@ -211,7 +215,7 @@ input{
 }
 
 .field_with_errors{
-  @extend .has-error;
+  // @extend .has-error;
   .form-control{
     color: $state-danger-text;
   }
