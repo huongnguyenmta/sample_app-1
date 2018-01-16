@@ -1,5 +1,5 @@
 <div class="card mb-4">
-  <img class="card-img-top" src="<%= post.image_url %>" alt="Card image cap">
+  <%= image_tag post.image_url, class: "card-img-top", alt: "Card image cap" %>
 
   <!-- CARD BODY  -->
   <div class="card-body">
@@ -11,7 +11,7 @@
       <%= post.content %>
     </p>
 
-    <a href="#" class="btn btn-primary">Read More →</a>
+    <%= link_to "Read More →", post_path(post), class: "btn btn-primary" %>
   </div>
   <!-- END CARD BODY  -->
 
