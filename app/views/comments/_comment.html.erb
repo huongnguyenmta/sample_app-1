@@ -1,0 +1,13 @@
+<div class="media">
+  <%= gravatar_for(comment.user) %>
+  <div class="media-body">
+    <h5 class="mt-0">
+      <%= comment.user.name %>
+      <small>
+        <%= time_ago_in_words(comment.created_at) %> ago
+      </small>
+    </h5>
+    <%= comment.content %>
+    <%= link_to "Edit", edit_comment_path(comment) %>
+  </div>
+</div>

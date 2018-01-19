@@ -14,7 +14,7 @@
   <!-- END CARD BODY  -->
 
   <div class="card-footer text-muted">
-    <%= form_for @comment do |f| %>
+    <%= form_for @comment, remote: true do |f| %>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.hidden_field :post_id, value: @post.id %>
 
@@ -33,5 +33,10 @@
       </div>
     <% end %>
 
+    <div class="list-comments">
+      <% if @comments.any? %>
+        <%= render partial: "comments/comment", collection: @comments %>
+      <% end %>
+    </div>
   </div>
 </div>
